@@ -1,0 +1,28 @@
+<!-- <app-navbar></app-navbar> -->
+
+<!-- <form [formGroup]="form" (ngSubmit)="save()">
+  <app-input [basicForm]="form"></app-input>
+  <mat-form-field>
+      <input placeholder="age" matInput formControlName="age">
+  </mat-form-field>
+  <mat-form-field>
+      <input placeholder="Class" matInput formControlName="className">
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" color="primary">Save</button>
+</form>
+
+<div>
+  {{form.value | json}}
+</div> -->
+
+<app-input [type]="number" [placeholder]="'Basic salary'" [min]="1000" [max]="500000" value="" (valueEvent)="valueChanged($event)" (keyupEvent)="keyupChanged($event)"></app-input>
+<p>{{ txtValue }}</p>
+<br><br><br>
+<form [formGroup]="form" (ngSubmit)="save()">
+  <app-mat-forms [parentForm]="form"></app-mat-forms>
+</form>
+<div>
+  {{form.value | json}}
+</div>
+<router-outlet></router-outlet>

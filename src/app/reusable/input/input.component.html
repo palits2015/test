@@ -1,0 +1,8 @@
+<input  [type]="type"
+        [placeholder]="placeholder"
+        [min]="min"
+        [max]="max"
+        [value]="value"
+        (click)="$event.stopPropagation();"
+        (change)="valueChanged($event)"
+        (keyup)="keyupChanged($event)">
